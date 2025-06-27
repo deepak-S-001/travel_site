@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Register Interest - Travel Genie</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <script type="text/javascript">
+    var utag_data = JSON.parse(localStorage.getItem("item_data"))
+    utag_data["tealium_event"] = "add_to_cart"
+    utag_data["page_name"] = "Cart"
+  </script>
+
+  <!-- Loading script asynchronously -->
+  <script type="text/javascript">
+      (function (a, b, c, d) {
+        a = 'https://tags.tiqcdn.com/utag/nabler-sandbox/deepak.s/prod/utag.js';
+        b = document; c = 'script'; d = b.createElement(c); d.src = a; d.type = 'text/java' + c; d.async = true;
+        a = b.getElementsByTagName(c)[0]; a.parentNode.insertBefore(d, a);
+      })();
+  </script>
+  <header>
+    <nav>
+      <button onclick="location.href='index.html'">Home</button>
+      <button onclick="location.href='paris.html'">Paris</button>
+      <button onclick="location.href='bali.html'">Bali</button>
+      <button onclick="location.href='iceland.html'">Iceland</button>
+    </nav>
+  </header>
+  <main>
+
+    <h1>Product Details</h1>
+
+    <form action='payment.html' method='GET'>
+      <div id="product-info-container" style="margin: 20px auto;"></div>
+      <button type='submit'>Payment</button>
+    </form>
+
+  </main>
+</body>
+<script>
+  const data = JSON.parse(localStorage.getItem("item_data"))
+
+  const container = document.getElementById("product-info-container");
+
+  // Styling the container for better visuals
+  container.style.border = "1px solid #ccc";
+  container.style.borderRadius = "8px";
+  container.style.padding = "16px";
+  container.style.maxWidth = "400px";
+  container.style.backgroundColor = "#f9f9f9";
+  container.style.fontFamily = "Arial, sans-serif";
+
+  // Create a heading
+  const heading = document.createElement("h2");
+  heading.innerText = "Product Details";
+  heading.style.marginBottom = "12px";
+  container.appendChild(heading);
+
+  // Loop through the object and display each key-value pair
+  for (const [key, value] of Object.entries(data)) {
+    const row = document.createElement("div");
+    row.style.marginBottom = "6px";
+
+    const label = document.createElement("strong");
+    label.innerText = key.replace(/_/g, " ") + ": ";
+    label.style.color = "#333";
+
+    const val = document.createElement("span");
+    val.innerText = value;
+
+    row.appendChild(label);
+    row.appendChild(val);
+    container.appendChild(row);
+  }
+
+</script>
+
+</html>

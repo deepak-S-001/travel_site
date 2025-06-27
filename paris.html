@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Paris - Travel Genie</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <script type="text/javascript">
+    var utag_data = {
+      tealium_event: "view_item", // 
+      product_quantity: "1", // 
+      product_id: "H003", // Contains product ID(s) - multiple values should be comma-separated.
+      product_name: "paris", // Contains product name(s) - multiple values should be comma-separated.
+      product_brand: "travel life", // Contains product brand(s) - multiple values should be comma-separated.
+      product_category: "travel", // Contains product category(s) - multiple values should be comma-separated.
+      product_unit_price: "1250", // Contains product unit price(s) - multiple values should be comma-separated.
+      product_price: "1250", // Contains product list price(s) before discount - multiple values should be comma-separated.
+      page_name: "Product", // 
+    }
+  </script>
+
+  <!-- Loading script asynchronously -->
+  <script type="text/javascript">
+      (function (a, b, c, d) {
+        a = 'https://tags.tiqcdn.com/utag/nabler-sandbox/deepak.s/prod/utag.js';
+        b = document; c = 'script'; d = b.createElement(c); d.src = a; d.type = 'text/java' + c; d.async = true;
+        a = b.getElementsByTagName(c)[0]; a.parentNode.insertBefore(d, a);
+      })();
+  </script>
+  <header>
+    <nav>
+      <button onclick="location.href='index.html'">Home</button>
+      <button onclick="location.href='paris.html'">Paris</button>
+      <button onclick="location.href='bali.html'">Bali</button>
+      <button onclick="location.href='iceland.html'">Iceland</button>
+    </nav>
+  </header>
+  <main>
+
+    <h1>Discover Paris</h1>
+    <img
+      src="https://res.cloudinary.com/dtljonz0f/image/upload/c_fill,w_3840,g_auto/f_auto/q_auto:eco/v1/Paris-hp-banner_kzqphg?_a=BAVAZGE70"
+      alt="Travel Banner" style="width:50%; border-radius: 10px;">
+    <p style="width: 50%;margin: 40px auto;">Paris, the timeless capital of romance and culture, invites you to lose
+      yourself in its cobbled streets, iconic landmarks, and world-renowned cuisine. From the breathtaking view atop the
+      Eiffel Tower to the artistic treasures of the Louvre, every corner of Paris tells a story. Whether you're enjoying
+      a sunset cruise on the Seine or sipping espresso at a sidewalk café in Montmartre, the city promises unforgettable
+      moments steeped in elegance and charm.</p>
+    <button class='cta-button' onclick="location.href='checkout.html?destination=Paris'">I'm Interested</button>
+
+  </main>
+</body>
+<script>
+  localStorage.setItem("item_data", JSON.stringify({
+    product_quantity: "1", 
+    product_id: "H003", 
+    product_name: "paris", 
+    product_brand: "travel life", 
+    product_category: "travel", 
+    product_unit_price: "1250", 
+    product_price: "1250", 
+  }))
+</script>
+
+</html>

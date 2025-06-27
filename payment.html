@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register Interest - Travel Genie</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <script type="text/javascript">
+    var utag_data = JSON.parse(localStorage.getItem("item_data"))
+    utag_data["tealium_event"] = "begin_checkout"
+    utag_data["page_name"] = "Payment"
+  </script>
+
+  <!-- Loading script asynchronously -->
+  <script type="text/javascript">
+      (function (a, b, c, d) {
+        a = 'https://tags.tiqcdn.com/utag/nabler-sandbox/deepak.s/prod/utag.js';
+        b = document; c = 'script'; d = b.createElement(c); d.src = a; d.type = 'text/java' + c; d.async = true;
+        a = b.getElementsByTagName(c)[0]; a.parentNode.insertBefore(d, a);
+      })();
+  </script>
+  <header>
+    <nav>
+      <button onclick="location.href='index.html'">Home</button>
+      <button onclick="location.href='paris.html'">Paris</button>
+      <button onclick="location.href='bali.html'">Bali</button>
+      <button onclick="location.href='iceland.html'">Iceland</button>
+    </nav>
+  </header>
+  <main>
+    
+<h1>Let’s Plan Your Trip!</h1>
+<form action='thankyou.html' method='GET'>
+  <input type='text' name='name' placeholder='Your Name' required><br>
+  <input type='email' name='email' placeholder='Your Email' required><br>
+  <button type='submit'>Purchase</button>
+</form>
+
+  </main>
+</body>
+</html>

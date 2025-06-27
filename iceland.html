@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Iceland - Travel Genie</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <script type="text/javascript">
+    var utag_data = {
+      tealium_event: "view_item", // 
+      product_quantity: "1", // 
+      product_id: "H002", // Contains product ID(s) - multiple values should be comma-separated.
+      product_name: "iceland", // Contains product name(s) - multiple values should be comma-separated.
+      product_brand: "travel life", // Contains product brand(s) - multiple values should be comma-separated.
+      product_category: "travel", // Contains product category(s) - multiple values should be comma-separated.
+      product_unit_price: "1000", // Contains product unit price(s) - multiple values should be comma-separated.
+      product_price: "1000", // Contains product list price(s) before discount - multiple values should be comma-separated.
+      page_name: "Product", // 
+    }
+  </script>
+
+  <!-- Loading script asynchronously -->
+  <script type="text/javascript">
+      (function (a, b, c, d) {
+        a = 'https://tags.tiqcdn.com/utag/nabler-sandbox/deepak.s/prod/utag.js';
+        b = document; c = 'script'; d = b.createElement(c); d.src = a; d.type = 'text/java' + c; d.async = true;
+        a = b.getElementsByTagName(c)[0]; a.parentNode.insertBefore(d, a);
+      })();
+  </script>
+  <header>
+    <nav>
+      <button onclick="location.href='index.html'">Home</button>
+      <button onclick="location.href='paris.html'">Paris</button>
+      <button onclick="location.href='bali.html'">Bali</button>
+      <button onclick="location.href='iceland.html'">Iceland</button>
+    </nav>
+  </header>
+  <main>
+    
+<h1>Adventure in Iceland</h1>
+<img src="https://s3.amazonaws.com/iexplore_web/images/assets/000/006/405/original/iceland.jpg?1443530040" alt="Travel Banner" style="width:50%; border-radius: 10px;">
+<p style="width: 50%;margin: 40px auto;">Iceland is a land of fire and ice where natural wonders await around every corner. From glacial lagoons and towering waterfalls to black sand beaches and erupting geysers, this Nordic paradise is a dream for nature lovers and adventurers alike. Chase the northern lights in winter or hike beneath the midnight sun in summer—either way, Iceland promises a once-in-a-lifetime experience.</p>
+<button class='cta-button' onclick="location.href='checkout.html?destination=Iceland'">I'm Interested</button>
+
+  </main>
+</body>
+<script>
+  localStorage.setItem("item_data", JSON.stringify({
+      product_quantity: "1", 
+      product_id: "H002",
+      product_name: "iceland", 
+      product_brand: "travel life", 
+      product_category: "travel",
+      product_unit_price: "1000", 
+      product_price: "1000", 
+    }))
+</script>
+</html>
